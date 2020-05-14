@@ -3,7 +3,7 @@ from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 
-buzzer=29
+buzzer=5
 GPIO.setup(buzzer,GPIO.OUT)
 
 try:
@@ -17,4 +17,5 @@ try:
         sleep(0.5)
 
 except KeyboardInterrupt:
+    GPIO.output(buzzer,GPIO.LOW)
     print("Gotovo!")
