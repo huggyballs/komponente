@@ -1,8 +1,8 @@
 import nfc
 from nfc.clf import RemoteTarget
 
-clf.open
 clf = nfc.ContactlessFrontend()
+clf.open
 assert clf.open('tty:AMA0') is True
 clf.close
 
