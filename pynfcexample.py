@@ -12,3 +12,7 @@ for target in n.poll():
     except TimeoutException:
         print("Neuspjeh!")
         pass
+    except KeyboardInterrupt:
+        print("Prekinuto!")
+        pass
+    
