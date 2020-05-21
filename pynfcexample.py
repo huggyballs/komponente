@@ -9,10 +9,9 @@ for target in n.poll():
     try:
         print(target.uid, target.auth(DESFIRE_DEFAULT_KEY if type(target) == Desfire else MIFARE_BLANK_TOKEN))
         print("Uspjeh!")
-    except TimeoutException:
+    except TimeoutError:
         print("Neuspjeh!")
         pass
     except KeyboardInterrupt:
         print("Prekinuto!")
         pass
-    
