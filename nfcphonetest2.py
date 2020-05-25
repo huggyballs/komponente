@@ -7,7 +7,7 @@ try:
     tag = clf.connect(llcp ={'on-connect': lambda tag: False})
     print(tag)
     print("Uspjesno citanje!")
-except:
+except TimeoutError:
     print("Neuspjesno citanje!")
 finally:
     clf.close()
