@@ -9,7 +9,7 @@ message = """\
 Subject: Hi there
 
 This message is sent from Python."""
-
+server = smtplib.SMTP('smtp.gmail.com:587')
 try:
     server = smtplib.SMTP('smtp.gmail.com:587')
     server.ehlo()
