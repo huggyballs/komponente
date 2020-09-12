@@ -9,9 +9,9 @@ message = """\
 Subject: Hi there
 
 This message is sent from Python."""
-server = smtplib.SMTP('smtp.gmail.com:587')
+server = smtplib.SMTP('smtp.gmail.com', port)
 try:
-    server = smtplib.SMTP('smtp.gmail.com:587')
+    server = smtplib.SMTP('smtp.gmail.com', port)
     server.ehlo()
     server.starttls()
     server.login(sender_email, password)
