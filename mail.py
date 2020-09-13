@@ -16,8 +16,8 @@ try:
     server.starttls()
     server.login(sender_email, password)
     server.sendmail(sender_email, receiver_email, message)
-except:
-    print('Error')
+except Exception as e:
+    print(e)
 finally:
     server.quit()
 
