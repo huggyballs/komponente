@@ -21,7 +21,7 @@ def sendEmail(msg):
         server.ehlo()
         server.starttls()
         server.login(sender_email, password)
-        if msg == 1
+        if msg == 1:
             server.sendmail(sender_email, receiver_email, message)
         else:
             server.sendmail(sender_email, receiver_email, message2)
